@@ -1,0 +1,89 @@
+body{
+    background:#111827;
+    color:white;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:600px;
+    text-align:center;
+}
+
+.card{
+    background:#1f2937;
+    padding:30px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+input,select{
+    width:90%;
+    padding:15px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+}
+
+button{
+    width:95%;
+    padding:15px;
+    margin-top:20px;
+    background:#4f46e5;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#3730a3;
+}
+.result-card{
+    margin-top:30px;
+    background:#111827;
+    padding:25px;
+    border-radius:15px;
+    border:2px solid #4f46e5;
+}
+
+.result-card h2{
+    color:#22c55e;
+    font-size:32px;
+}
+
+.result-card p{
+    color:#d1d5db;
+    font-size:18px;
+}
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,select{
+    padding:15px;
+    font-size:18px;
+    border-radius:10px;
+    border:none;
+}
+
+button{
+    padding:15px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:#4f46e5;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#3730a3;
+}
