@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Currency Converter</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>💱 Live Currency Converter</h1>
+
+    <p>Convert any world currency instantly!</p>
+
+<div class="card">
+
+    <form action="/convert" method="POST">
+
+        <input
+            type="number"
+            name="amount"
+            placeholder="Enter Amount"
+            required
+        >
+
+        <select name="from_currency">
+            <option>INR</option>
+            <option>USD</option>
+            <option>EUR</option>
+            <option>GBP</option>
+            <option>JPY</option>
+        </select>
+        
+        <button type="button" onclick="swapCurrency()">
+    ⇄
+</button>
+
+        <select name="to_currency">
+            <option>USD</option>
+            <option>INR</option>
+            <option>EUR</option>
+            <option>GBP</option>
+            <option>JPY</option>
+        </select>
+
+        <button type="submit">
+            Convert
+        </button>
+{% if result %}
+
+<div class="result-card">
+
+    <h2>
+        {{ amount }} {{ from_currency }}
+        =
+        {{ "%.2f"|format(result) }} {{ to_currency }}
+    </h2>
+
+    <p>
+        Exchange Rate:
+        1 {{ from_currency }}
+        =
+        {{ "%.4f"|format(rate) }} {{ to_currency }}
+    </p>
+
+</div>
+
+{% endif %}
+    </form>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
